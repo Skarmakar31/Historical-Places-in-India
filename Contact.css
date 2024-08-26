@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(1, 1, 50);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+#main{
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "side content content"
+        "foot foot foot";
+    grid-template-rows: 30px auto 30px;
+}
+
+header{
+    grid-area: head;
+}
+header img{
+    height: 60px;
+}
+article{
+    grid-area: content;
+}
+aside{
+    grid-area: side;
+}
+footer{
+    grid-area: foot;
+}
+
+
+.contact{
+    margin-left: 39%;
+    margin-top: -50px;
+    color: white;
+    font-size: 60px;
+    filter: drop-shadow(1px 1px 5px rgb(0, 255, 85));
+    animation: cont 2s linear;
+}
+.contact span{
+    color: yellow;
+    text-decoration: underline dotted;
+}
+
+
+article p{
+    color: white;
+    font-size: 40px;
+    margin-top: 8%;
+    margin-left: -16%;
+
+    display: inline-block;
+
+    background-image: linear-gradient(60deg, red, rgba(239, 73, 73, 0.871), rgb(80, 80, 232), blue);
+    filter: drop-shadow(-2px 0px 8px rgba(0, 166, 255, 0.601));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.mail{
+    font-size: 60px;
+    color: #fff;
+    margin-top: 40%;
+    margin-left: 5%;
+    gap: 10px;
+    display: flex;
+
+    animation: email linear ;
+    animation-timeline: view();
+    animation-range: entry initial cover 20%;
+}
+.mail a{
+    font-size: 50px;
+    color: rgb(64, 241, 241);
+    filter: drop-shadow(1px 1px 4px rgb(255, 239, 241));
+}
+
+
+.github{
+    font-size: 60px;
+    color: #fff;
+    width: 100%;
+    margin-top: 42%;
+    margin-left: 55%;
+    display: flex;
+
+    animation: github linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 55%;
+}
+.github a{
+    color: rgba(165, 235, 165, 0.765);
+    text-decoration: none;
+    display: flex;
+    gap: 6px;
+    filter: drop-shadow(-3px -3px 5px rgb(207, 233, 155));
+}
+
+
+.linkedin{
+    font-size: 50px;
+    color: #fff;
+    margin-top: 70%;
+    margin-left: 6%;
+
+    animation: linkedin linear ;
+    animation-timeline: view();
+    animation-range: entry 5% cover 20%;
+}
+.linkedin a{
+    color: rgb(241, 187, 247);
+    text-decoration: none;
+    filter: drop-shadow(6px -5px 5px rgb(209, 20, 42));
+}
+
+
+.whatsapp{
+    font-size: 60px;
+    color: #fff;
+    width: 100%;
+    margin-top: 260%;
+    margin-left: 30%;
+    padding-bottom: 20px;
+    padding-right: 5%;
+    display: flex;
+    justify-content: end;
+    gap: 6px;
+
+    animation: whatsapp linear ;
+    animation-timeline: view();
+    animation-range: entry 10% ;
+}
+.whatsapp a{
+    text-decoration: none;
+    color: rgb(56, 254, 65);
+    filter: drop-shadow(-5px 3px 5px rgba(232, 255, 28, 0.807));
+}
+
+
+
+@keyframes cont{
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 0.85;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes email{
+    from{
+        opacity: 1;
+        transform: translateX(55%);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+}
+@keyframes github{
+    0%{
+        opacity: 0;
+        transform: translateX(140%);
+    }
+    40%{
+        opacity: 0.5;
+        transform: translateX(85%);
+    }
+    80%{
+        opacity: 0.6;
+        transform: translateX(35%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(-13%);
+    }
+}
+@keyframes linkedin{
+    from{
+        opacity: 0;
+        transform: translateX(-90%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(10%);
+    }
+}
+@keyframes whatsapp{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}
+
+/* @media screen and (max-width: 400px){
+    header .contact{
+        font-size: 30px;
+        display: inline;
+        align-items: center;
+    }
+} */
